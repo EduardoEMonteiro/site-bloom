@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Hair | Tamires Sousa</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+	.footer-dev {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 10px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 10px;
+}
+
+.footer-dev a {
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+.footer-dev a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+        /* --- IMPORTAÇÃO DA FONTE SANGGAR --- */
+        @font-face {
+            font-family: 'Sanggar';
+            src: url('sanggar.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            --header-bg: #012220; 
+            --bg-dark: #000000;   
+            --text-accent: #fff8af; 
+            --text-body: #e8e8e8; 
+            
+            /* DEFINIÇÃO DE FONTES */
+            --font-heading: 'Sanggar', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            /* TAMANHOS OTIMIZADOS */
+            --header-height-pc: 130px;
+            --header-height-mobile: 100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-body);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Títulos usando Sanggar */
+        h1, h2, h3 { 
+            font-family: var(--font-heading); 
+            margin: 0 0 20px 0; 
+            line-height: 1.2; 
+            font-weight: normal;
+            letter-spacing: 0.5px;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .section-padding { padding: 100px 0; }
+
+        /* --- HEADER OTIMIZADO --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height-pc);
+            position: relative;
+            border-bottom: 1px solid #0a3530;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .social-bar {
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 12;
+        }
+
+        .social-bar a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.3); 
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; 
+        }
+
+        .social-bar a:hover {
+            color: var(--text-accent);
+            border-color: var(--text-accent);
+            transform: scale(1.1);
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .logo-img {
+            width: 280px; 
+            max-width: 70vw;
+            pointer-events: auto;
+        }
+
+        /* --- SEÇÃO HERO (NOVA) --- */
+        .hero-section {
+            background: linear-gradient(135deg, var(--header-bg) 0%, #001a18 100%);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #0a3530;
+        }
+
+        .hero-section h1 {
+            font-size: 56px;
+            color: var(--text-accent);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            color: #d0d0d0;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #25D366;
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            font-family: var(--font-body);
+        }
+
+        .cta-button:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-button i {
+            font-size: 22px;
+        }
+
+        /* --- SEÇÕES --- */
+        .about-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 60px; 
+            align-items: center; 
+        }
+        
+        .about-text h2 { 
+            color: var(--text-accent); 
+            font-size: 52px; 
+        }
+        
+        .about-text p { 
+            font-size: 17px; 
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .about-text h3 { 
+            color: var(--text-accent); 
+            font-size: 32px; 
+            margin-top: 40px; 
+        }
+        
+        .about-list { 
+            list-style: none; 
+            padding: 0; 
+        }
+        
+        .about-list li { 
+            margin-bottom: 18px; 
+            padding-left: 25px; 
+            position: relative;
+            font-size: 16px;
+        }
+        
+        .about-list li::before { 
+            content: "✦"; 
+            color: var(--text-accent); 
+            position: absolute; 
+            left: 0; 
+            font-size: 14px;
+        }
+        
+        .section-title { 
+            text-align: center; 
+            color: var(--text-accent); 
+            font-size: 52px; 
+            margin-bottom: 60px; 
+        }
+        
+        /* Widget containers melhorados */
+        .widget-container { 
+            min-height: 400px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .widget-container::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--text-accent);
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        .spotify-section { 
+            background-color: var(--header-bg);
+            text-align: center; 
+            padding: 80px 20px; 
+            border-top: 1px solid #0a3530; 
+        }
+
+        .spotify-section h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .spotify-section p {
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+        
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--header-bg);
+            padding-top: 80px;
+            padding-bottom: 20px;
+            color: var(--text-body);
+            border-top: 1px solid #0a3530;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-logo-section img { 
+            width: 150px; 
+            margin-bottom: 20px; 
+        }
+        
+        .footer-logo-section p { 
+            font-size: 15px; 
+            color: var(--text-body); 
+            margin-bottom: 20px; 
+        }
+        
+        .footer-logo-section .social-icons { 
+            display: flex; 
+            gap: 15px; 
+        }
+        
+        .footer-logo-section .social-icons a { 
+            color: #fff; 
+            font-size: 22px; 
+            transition: color 0.3s; 
+        }
+        
+        .footer-logo-section .social-icons a:hover { 
+            color: var(--text-accent); 
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            border: 0;
+            filter: grayscale(80%) brightness(80%);
+        }
+
+        .footer-info-block h3 { 
+            color: var(--text-accent); 
+            font-size: 24px; 
+            margin-bottom: 20px; 
+        }
+        
+        .footer-info-block p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #e0e0e0;
+        }
+        
+        .footer-info-block p i {
+            margin-right: 12px;
+            font-size: 18px;
+            color: var(--text-accent);
+            flex-shrink: 0;
+            padding-top: 3px;
+        }
+        
+        .footer-info-block a { 
+            color: #e0e0e0; 
+            text-decoration: none; 
+            transition: color 0.3s; 
+        }
+        
+        .footer-info-block a:hover { 
+            color: var(--text-accent); 
+        }
+
+        .footer-copyright { 
+            text-align: center; 
+            font-size: 13px; 
+            color: #888; 
+            padding: 15px 0; 
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            header { height: var(--header-height-mobile); }
+            
+            .social-bar { 
+                left: 15px; 
+                gap: 10px; 
+                flex-direction: column;
+            }
+            
+            .social-bar a { 
+                width: 35px; 
+                height: 35px; 
+                font-size: 16px; 
+            }
+            
+            .logo-img { width: 180px; }
+
+            .hero-section {
+                padding: 50px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 38px;
+            }
+
+            .hero-section p {
+                font-size: 17px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+            
+            .about-grid { 
+                grid-template-columns: 1fr; 
+                gap: 40px; 
+            }
+            
+            .about-text h2 { font-size: 38px; }
+            .about-text h3 { font-size: 28px; }
+            .section-title { font-size: 38px; }
+            
+            .footer-grid { 
+                grid-template-columns: 1fr; 
+                text-align: center; 
+            }
+            
+            .footer-logo-section { 
+                margin-bottom: 40px; 
+            }
+            
+            .footer-map iframe { 
+                max-height: 250px; 
+            }
+            
+            .footer-info-block { 
+                margin-bottom: 30px; 
+            }
+            
+            .footer-info-block h3, 
+            .footer-info-block p { 
+                justify-content: center; 
+                text-align: center; 
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .spotify-section h2 {
+                font-size: 32px;
+            }
+        }
+
+        /* Fade in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="social-bar">
+            <a href="https://instagram.com/bloomhairts" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/SEU_FACEBOOK" target="_blank" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5532998063010" target="_blank" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="logo-container">
+            <img src="Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp" alt="Bloom por Tamires Sousa" class="logo-img">
+        </div>
+    </header>
+
+    <!-- NOVA SEÇÃO HERO -->
+    <section class="hero-section fade-in">
+        <div class="container">
+            <h1>Realce sua beleza com quem entende de você</h1>
+            <p>Transforme seu visual em um espaço acolhedor, moderno e cheio de atitude. Seu momento de cuidado começa aqui.</p>
+            <a href="https://wa.me/5532998063010?text=Olá!%20Gostaria%20de%20agendar%20um%20horário" class="cta-button" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Agende seu Horário
+            </a>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://bloomts.com.br/wp-content/uploads/2025/05/1000094454-768x1024.jpg" alt="Tamires Sousa" style="border-radius: 8px;" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre Tamires Sousa</h2>
+                    <p>Tamires Sousa é mais do que uma profissional da beleza — ela é uma artista dedicada a realçar o melhor de cada cliente. Com anos de experiência, constante aperfeiçoamento e um olhar único para tendências, ela criou um espaço onde cada detalhe importa.</p>
+                    <p>Seu salão é o reflexo da sua personalidade: acolhedor, moderno e cheio de atitude.</p>
+                    <h3>Porque nos escolher?</h3>
+                    <ul class="about-list">
+                        <li><strong>Atendimento exclusivo e personalizado:</strong> cada cliente é única, e seu atendimento também.</li>
+                        <li><strong>Técnicas atualizadas:</strong> cortes, colorações e tratamentos com as últimas tendências e tecnologias.</li>
+                        <li><strong>Ambiente acolhedor:</strong> conforto, música boa e aquele cafezinho que faz você se sentir em casa.</li>
+                        <li><strong>Produtos de alta qualidade:</strong> trabalhamos com marcas profissionais que cuidam da sua beleza com saúde.</li>
+                        <li><strong>Amor pelo que faz:</strong> aqui, você não é só mais uma — você é parte da nossa história.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: var(--header-bg); padding: 100px 0; border-top: 1px solid #0a3530; border-bottom: 1px solid #0a3530;">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--text-accent);">Portfólio</h2>
+            <div class="widget-container">
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-8733f1ae-bf08-464b-9a0c-5b5d4a058605" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <h2 class="section-title">O que dizem sobre nós</h2>
+            <div class="widget-container">
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-612d6f33-40e9-44a8-b82c-439ca92b3faa" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="spotify-section">
+        <div class="container">
+            <h2 style="color: var(--text-accent);">Ouça o clima do nosso salão</h2>
+            <p style="color: #ccc; margin-bottom: 30px;">
+                A trilha sonora que anima nossos atendimentos. Aperte o play e entre no clima!
+            </p>
+            <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/3fK9qQ2m9qNw9UhcQYjF8Y?utm_source=generator" 
+                width="100%" height="152" frameBorder="0" 
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-section">
+                    <img src="Simbolo-para-perfil-Instagram-e-whatsapp-removebg-preview.png" alt="Bloom Logo">
+                    <p>Beleza com atitude, estilo com alma.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/bloomhairts" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/SEU_FACEBOOK" target="_blank" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5532998063010" target="_blank" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5235599131374!2d-44.25683364966808!3d-21.13155272681836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c71eff5e2b6f%3A0x2d54f3e055fb91e5!2sBloom%20por%20Tamires%20Sousa!5e0!3m2!1spt-BR!2sbr!4v1763582783485!5m2!1spt-BR!2sbr" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="footer-info-block">
+                    <h3>Localização</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>Rua Antônio Rocha, 55 Centro, São João Del Rei - Minas Gerais</p>
+                </div>
+
+                <div class="footer-info-block">
+                    <h3>Entre em contato</h3>
+                    <p><i class="fas fa-phone"></i><a href="https://wa.me/5532998063010">+55 32 99806-3010</a></p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:contato@bloomts.com.br">contato@bloomts.com.br</a></p>
+                </div>
+            </div>
+            <p class="footer-copyright">Copyright © 2025 | Bloom por Tamires Sousa</p>
+	    <p class="footer-dev">Desenvolvido por <a href="mailto:contato@aurago.site">AuraGo</a></p>
+        </div>
+    </footer>
+
+    <!-- Widget WhatsApp Flutuante (Elfsight) -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-b99e7b91-051e-426f-816d-662ed467388e" data-elfsight-app-lazy></div>
+
+</body>
