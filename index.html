@@ -3,38 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bloom Hair por Tamires Sousa. Salão de beleza especializado em realçar sua melhor versão. Agende seu horário.">
-    <title>Bloom Hair | Tamires Sousa</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Bloom Hair por Tamires Sousa em São João Del Rei. Salão de beleza especializado em cortes, colorações e tratamentos capilares. Agende seu horário pelo WhatsApp!">
+    <meta name="keywords" content="salão de beleza, cabeleireiro, corte de cabelo, coloração, tratamento capilar, São João Del Rei, Tamires Sousa, Bloom Hair">
+    <meta name="author" content="Bloom Hair - Tamires Sousa">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#012220">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bloomts.com.br/">
+    <meta property="og:title" content="Bloom Hair | Tamires Sousa - Salão de Beleza em São João Del Rei">
+    <meta property="og:description" content="Realce sua beleza com quem entende de você. Cortes, colorações e tratamentos em um espaço acolhedor e cheio de atitude.">
+    <meta property="og:image" content="https://bloomts.com.br/Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bloomts.com.br/">
+    <meta property="twitter:title" content="Bloom Hair | Tamires Sousa - Salão de Beleza">
+    <meta property="twitter:description" content="Realce sua beleza com quem entende de você. Agende seu horário!">
+    <meta property="twitter:image" content="https://bloomts.com.br/Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bloomts.com.br/">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>Bloom Hair | Tamires Sousa - Salão de Beleza em São João Del Rei, MG</title>
+    
+    <!-- Preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://elfsightcdn.com">
+    
+    <!-- Font Awesome com preload -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Google Fonts otimizado -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-        /* --- IMPORTAÇÃO DA FONTE SANGGAR --- */
-        @font-face {
-            font-family: 'Sanggar';
-            src: url('sanggar.otf') format('opentype'); /* Confirme se é .otf ou .ttf */
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Bloom Hair por Tamires Sousa",
+      "image": "https://bloomts.com.br/Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp",
+      "description": "Salão de beleza especializado em cortes, colorações e tratamentos capilares em São João Del Rei",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Antônio Rocha, 55",
+        "addressLocality": "São João Del Rei",
+        "addressRegion": "MG",
+        "postalCode": "36300-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -21.131552,
+        "longitude": -44.256833
+      },
+      "url": "https://bloomts.com.br",
+      "telephone": "+5532998063010",
+      "email": "contato@bloomts.com.br",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://instagram.com/bloomhairts",
+        "https://facebook.com/SEU_FACEBOOK"
+      ]
+    }
+    </script>
 
+    <style>
         /* --- VARIÁVEIS E CORES --- */
         :root {
             --header-bg: #012220; 
             --bg-dark: #000000;   
-            --text-accent: #fff8af; /* Dourado Luxo */
+            --text-accent: #fff8af;
             --text-body: #e8e8e8; 
-            --success-color: #25D366; /* Verde WhatsApp */
-            
-            /* FONTES */
-            --font-heading: 'Sanggar', serif;
+            --success-color: #25D366;
             --font-body: 'Montserrat', sans-serif;
-            
-            /* TAMANHOS */
             --header-height-pc: 120px;
             --header-height-mobile: 90px;
         }
@@ -49,15 +110,15 @@
             color: var(--text-body);
             line-height: 1.7;
             font-weight: 300;
-            overflow-x: hidden; /* Evita rolagem lateral indesejada */
+            overflow-x: hidden;
         }
 
         /* --- TIPOGRAFIA --- */
         h1, h2, h3 { 
-            font-family: var(--font-heading); 
+            font-family: var(--font-body);
             margin-bottom: 20px; 
             line-height: 1.2; 
-            font-weight: normal;
+            font-weight: 600;
             letter-spacing: 0.5px;
         }
 
@@ -72,7 +133,7 @@
             background-color: var(--header-bg);
             height: var(--header-height-pc);
             position: relative;
-            border-bottom: 1px solid rgba(255, 248, 175, 0.1); /* Linha dourada sutil */
+            border-bottom: 1px solid rgba(255, 248, 175, 0.1);
             width: 100%;
             z-index: 100;
         }
@@ -93,7 +154,7 @@
             width: 280px; 
             max-width: 60vw;
             pointer-events: auto;
-            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); /* Destaque na logo */
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
         }
 
         .social-bar {
@@ -126,7 +187,7 @@
             transform: translateY(-3px);
         }
 
-        /* --- HERO SECTION (CONVERSÃO) --- */
+        /* --- HERO SECTION --- */
         .hero-section {
             background: radial-gradient(circle at center, #023330 0%, #000000 100%);
             padding: 100px 0 120px 0;
@@ -155,13 +216,13 @@
             font-weight: 300;
         }
 
-        /* Botão Principal com efeito Pulse */
+        /* Botão Principal - CONTRASTE MELHORADO */
         .cta-button {
             display: inline-flex;
             align-items: center;
             gap: 12px;
             background-color: var(--success-color);
-            color: #fff;
+            color: #000;
             padding: 18px 45px;
             font-size: 18px;
             font-weight: 600;
@@ -175,6 +236,7 @@
         .cta-button:hover {
             background-color: #1da851;
             transform: translateY(-3px);
+            color: #000;
         }
 
         @keyframes pulse-green {
@@ -183,7 +245,25 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
+        /* --- DEGRADÊS NAS TRANSIÇÕES --- */
+        .gradient-top {
+            background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--header-bg) 100%);
+            height: 80px;
+            margin-bottom: -1px;
+        }
+
+        .gradient-bottom {
+            background: linear-gradient(to bottom, var(--header-bg) 0%, var(--bg-dark) 100%);
+            height: 80px;
+            margin-top: -1px;
+        }
+
         /* --- SEÇÃO SOBRE --- */
+        .about-section {
+            background-color: var(--bg-dark);
+            position: relative;
+        }
+
         .about-grid { 
             display: grid; 
             grid-template-columns: 1fr 1.2fr; 
@@ -197,7 +277,7 @@
         
         .about-image img {
             border-radius: 8px;
-            box-shadow: 20px 20px 0px rgba(255, 248, 175, 0.05); /* Sombra "Design" */
+            box-shadow: 20px 20px 0px rgba(255, 248, 175, 0.05);
             transition: transform 0.4s;
         }
 
@@ -220,6 +300,18 @@
             color: var(--text-accent); 
             position: absolute; 
             left: 0; top: 2px;
+        }
+
+        /* --- PORTFÓLIO SECTION --- */
+        .portfolio-section {
+            background-color: var(--header-bg);
+            position: relative;
+        }
+
+        /* --- REVIEWS SECTION --- */
+        .reviews-section {
+            background-color: var(--bg-dark);
+            position: relative;
         }
 
         /* --- PORTFÓLIO E REVIEWS --- */
@@ -246,8 +338,8 @@
             background-color: var(--header-bg);
             text-align: center; 
             padding: 100px 20px; 
-            border-top: 1px solid #0a3530; 
             background-image: radial-gradient(circle at top, #023330 0%, #012220 100%);
+            position: relative;
         }
         .spotify-section h2 { font-size: 42px; }
 
@@ -256,7 +348,6 @@
             background-color: var(--header-bg);
             padding-top: 80px;
             padding-bottom: 20px;
-            border-top: 1px solid #0a3530;
         }
 
         .footer-grid {
@@ -268,34 +359,100 @@
             margin-bottom: 30px;
         }
 
-        .footer-logo-section { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .footer-logo-section img { width: 160px; margin-bottom: 20px; opacity: 0.9; }
-        .footer-logo-section .social-icons { display: flex; gap: 15px; }
-        .footer-logo-section .social-icons a { color: #fff; font-size: 22px; transition: 0.3s; }
-        .footer-logo-section .social-icons a:hover { color: var(--text-accent); }
+        .footer-logo-section { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+        
+        .footer-logo-section img { 
+            width: 160px; 
+            height: 210px;
+            margin-bottom: 20px; 
+            opacity: 0.9; 
+        }
+        
+        .footer-logo-section .social-icons { 
+            display: flex; 
+            gap: 15px; 
+        }
+        
+        .footer-logo-section .social-icons a { 
+            color: #fff; 
+            font-size: 22px; 
+            transition: 0.3s;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .footer-logo-section .social-icons a:hover { 
+            color: var(--text-accent); 
+        }
 
-        .footer-map iframe { width: 100%; height: 250px; border-radius: 8px; filter: grayscale(100%) invert(92%) contrast(83%); border: 1px solid #333; }
+        .footer-map iframe { 
+            width: 100%; 
+            height: 250px; 
+            border-radius: 8px; 
+            filter: grayscale(100%) invert(92%) contrast(83%); 
+            border: 1px solid #333;
+        }
 
-        .footer-info-block h3 { color: var(--text-accent); font-size: 22px; margin-bottom: 20px; }
-        .footer-info-block p { display: flex; align-items: center; margin-bottom: 15px; color: #ccc; }
-        .footer-info-block p i { margin-right: 12px; color: var(--text-accent); font-size: 18px; }
-        .footer-info-block a { color: #ccc; }
-        .footer-info-block a:hover { color: var(--text-accent); }
+        .footer-info-block h3 { 
+            color: var(--text-accent); 
+            font-size: 22px; 
+            margin-bottom: 20px; 
+        }
+        
+        .footer-info-block p { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            color: #e0e0e0;
+        }
+        
+        .footer-info-block p i { 
+            margin-right: 12px; 
+            color: var(--text-accent); 
+            font-size: 18px; 
+        }
+        
+        .footer-info-block a { 
+            color: #e0e0e0;
+        }
+        
+        .footer-info-block a:hover { 
+            color: var(--text-accent); 
+        }
 
-        .footer-copyright { text-align: center; font-size: 14px; color: #666; }
+        .footer-copyright { 
+            text-align: center; 
+            font-size: 14px; 
+            color: #999;
+        }
 
-        /* --- CRÉDITOS AURAGO --- */
+        /* --- CRÉDITOS AURAGO - CONTRASTE MELHORADO --- */
         .footer-dev {
             text-align: center;
             font-size: 12px;
-            color: #555;
+            color: #888;
             margin-top: 10px;
             letter-spacing: 1px;
         }
-        .footer-dev a { color: #777; font-weight: 600; }
-        .footer-dev a:hover { color: var(--text-accent); }
+        
+        .footer-dev a { 
+            color: #aaa; 
+            font-weight: 600; 
+        }
+        
+        .footer-dev a:hover { 
+            color: var(--text-accent); 
+        }
 
-        /* --- ANIMAÇÃO DE ENTRADA (SCROLL REVEAL) --- */
+        /* --- ANIMAÇÃO DE ENTRADA --- */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -318,112 +475,128 @@
             .cta-button { padding: 15px 30px; font-size: 16px; width: 85%; justify-content: center; }
 
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-image { order: -1; /* Imagem primeiro no mobile */ margin-bottom: 20px; }
+            .about-image { order: -1; margin-bottom: 20px; }
             .about-image img { box-shadow: none; }
             .about-text h2 { font-size: 36px; text-align: center; }
             .section-title { font-size: 36px; }
 
             .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
             .footer-info-block p { justify-content: center; }
+            
+            .gradient-top, .gradient-bottom { height: 50px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="social-bar">
-            <a href="https://instagram.com/bloomhairts" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/SEU_FACEBOOK" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/5532998063010" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
+    <header role="banner">
+        <nav class="social-bar" aria-label="Redes sociais">
+            <a href="https://instagram.com/bloomhairts" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/SEU_FACEBOOK" target="_blank" rel="noopener" aria-label="Curta nossa página no Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5532998063010" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </nav>
         <div class="logo-container">
-            <img src="Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp" alt="Bloom por Tamires Sousa" class="logo-img">
+            <img src="Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp" alt="Bloom por Tamires Sousa" class="logo-img" width="280" height="279">
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="container hero-content reveal">
-            <h1>Realce sua beleza com quem entende de você</h1>
-            <p>Transforme seu visual em um espaço acolhedor, moderno e cheio de atitude. <br>Seu momento de cuidado começa aqui.</p>
-            <a href="https://wa.me/5532998063010?text=Olá!%20Vim%20pelo%20site%20e%20quero%20agendar." class="cta-button" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-                Agende seu Horário
-            </a>
-        </div>
-    </section>
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content reveal">
+                <h1>Realce sua beleza com quem entende de você</h1>
+                <p>Transforme seu visual em um espaço acolhedor, moderno e cheio de atitude. <br>Seu momento de cuidado começa aqui.</p>
+                <a href="https://wa.me/5532998063010?text=Olá!%20Vim%20pelo%20site%20e%20quero%20agendar." class="cta-button" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    Agende seu Horário
+                </a>
+            </div>
+        </section>
 
-    <section class="section-padding" style="background-color: var(--bg-dark);">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image reveal">
-                    <img src="./1000094454.webp" alt="Tamires Sousa - Bloom Hair">
+        <section class="about-section section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="./1000094454.webp" alt="Tamires Sousa - Profissional de beleza especializada" width="445" height="594" loading="lazy">
+                    </div>
+                    <div class="about-text reveal">
+                        <h2>Sobre Tamires Sousa</h2>
+                        <p>Tamires Sousa é mais do que uma profissional da beleza — ela é uma artista dedicada a realçar o melhor de cada cliente. Com anos de experiência, constante aperfeiçoamento e um olhar único para tendências, ela criou um espaço onde cada detalhe importa.</p>
+                        <p>Seu salão é o reflexo da sua personalidade: acolhedor, moderno e cheio de atitude.</p>
+                        <h3>Porque nos escolher?</h3>
+                        <ul class="about-list">
+                            <li><strong>Atendimento exclusivo e personalizado:</strong> cada cliente é única, e seu atendimento também.</li>
+                            <li><strong>Técnicas atualizadas:</strong> cortes, colorações e tratamentos com as últimas tendências e tecnologias.</li>
+                            <li><strong>Ambiente acolhedor:</strong> conforto, música boa e aquele cafezinho que faz você se sentir em casa.</li>
+                            <li><strong>Produtos de alta qualidade:</strong> trabalhamos com marcas profissionais que cuidam da sua beleza com saúde.</li>
+                            <li><strong>Amor pelo que faz:</strong> aqui, você não é só mais uma — você é parte da nossa história.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="about-text reveal">
-                    <h2>Sobre Tamires Sousa</h2>
-                    <p>Tamires Sousa é mais do que uma profissional da beleza — ela é uma artista dedicada a realçar o melhor de cada cliente. Com anos de experiência, constante aperfeiçoamento e um olhar único para tendências, ela criou um espaço onde cada detalhe importa.</p>
-                    <p>Seu salão é o reflexo da sua personalidade: acolhedor, moderno e cheio de atitude.</p>
-                    <h3>Porque nos escolher?</h3>
-                    <ul class="about-list">
-                        <li><strong>Atendimento exclusivo e personalizado:</strong> cada cliente é única, e seu atendimento também.</li>
-                        <li><strong>Técnicas atualizadas:</strong> cortes, colorações e tratamentos com as últimas tendências e tecnologias.</li>
-                        <li><strong>Ambiente acolhedor:</strong> conforto, música boa e aquele cafezinho que faz você se sentir em casa.</li>
-                        <li><strong>Produtos de alta qualidade:</strong> trabalhamos com marcas profissionais que cuidam da sua beleza com saúde.</li>
-                        <li><strong>Amor pelo que faz:</strong> aqui, você não é só mais uma — você é parte da nossa história.</li>
-                    </ul>
+            </div>
+        </section>
+
+        <!-- DEGRADÊ DE TRANSIÇÃO -->
+        <div class="gradient-top"></div>
+
+        <section class="portfolio-section section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">Portfólio</h2>
+                <div class="widget-container reveal">
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-8733f1ae-bf08-464b-9a0c-5b5d4a058605" data-elfsight-app-lazy></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section style="background-color: var(--header-bg); padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div class="container">
-            <h2 class="section-title reveal">Portfólio</h2>
-            <div class="widget-container reveal">
-                <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-8733f1ae-bf08-464b-9a0c-5b5d4a058605" data-elfsight-app-lazy></div>
+        <!-- DEGRADÊ DE TRANSIÇÃO -->
+        <div class="gradient-bottom"></div>
+
+        <section class="reviews-section section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">O que dizem sobre nós</h2>
+                <div class="widget-container reveal">
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-612d6f33-40e9-44a8-b82c-439ca92b3faa" data-elfsight-app-lazy></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-padding" style="background-color: var(--bg-dark);">
-        <div class="container">
-            <h2 class="section-title reveal">O que dizem sobre nós</h2>
-            <div class="widget-container reveal">
-                <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-612d6f33-40e9-44a8-b82c-439ca92b3faa" data-elfsight-app-lazy></div>
+        <!-- DEGRADÊ DE TRANSIÇÃO -->
+        <div class="gradient-top"></div>
+
+        <section class="spotify-section">
+            <div class="container reveal">
+                <h2 style="color: var(--text-accent);">Ouça o clima do nosso salão</h2>
+                <p style="color: #ccc; margin-bottom: 30px;">
+                    A trilha sonora que anima nossos atendimentos. Aperte o play e entre no clima!
+                </p>
+                <iframe style="border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" 
+                    src="https://open.spotify.com/embed/playlist/3fK9qQ2m9qNw9UhcQYjF8Y?utm_source=generator" 
+                    width="100%" height="152" frameBorder="0" 
+                    title="Playlist Spotify Bloom Hair"
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <div class="spotify-section">
-        <div class="container reveal">
-            <h2 style="color: var(--text-accent);">Ouça o clima do nosso salão</h2>
-            <p style="color: #ccc; margin-bottom: 30px;">
-                A trilha sonora que anima nossos atendimentos. Aperte o play e entre no clima!
-            </p>
-            <iframe style="border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" 
-                src="https://open.spotify.com/embed/playlist/3fK9qQ2m9qNw9UhcQYjF8Y?utm_source=generator" 
-                width="100%" height="152" frameBorder="0" 
-                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-        </div>
-    </div>
-
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo-section">
-                    <img src="Simbolo-para-perfil-Instagram-e-whatsapp-removebg-preview.png" alt="Bloom Logo">
+                    <img src="Simbolo-para-perfil-Instagram-e-whatsapp-removebg-preview.png" alt="Bloom Hair Logo" width="160" height="210" loading="lazy">
                     <p>Beleza com atitude, estilo com alma.</p>
                     <div class="social-icons">
-                        <a href="https://instagram.com/bloomhairts" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/SEU_FACEBOOK" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/5532998063010" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/bloomhairts" target="_blank" rel="noopener" aria-label="Instagram Bloom Hair"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/SEU_FACEBOOK" target="_blank" rel="noopener" aria-label="Facebook Bloom Hair"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5532998063010" target="_blank" rel="noopener" aria-label="WhatsApp Bloom Hair"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5235599131374!2d-44.25683364966808!3d-21.13155272681836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c71eff5e2b6f%3A0x2d54f3e055fb91e5!2sBloom%20por%20Tamires%20Sousa!5e0!3m2!1spt-BR!2sbr!4v1763582783485!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5235599131374!2d-44.25683364966808!3d-21.13155272681836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c71eff5e2b6f%3A0x2d54f3e055fb91e5!2sBloom%20por%20Tamires%20Sousa!5e0!3m2!1spt-BR!2sbr!4v1763582783485!5m2!1spt-BR!2sbr" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa de localização - Bloom Hair, Rua Antônio Rocha, 55, Centro, São João Del Rei"></iframe>
                 </div>
 
                 <div class="footer-info-block">
@@ -440,7 +613,7 @@
             
             <p class="footer-copyright">Copyright © 2025 | Bloom por Tamires Sousa</p>
             <div class="footer-dev">
-                Desenvolvido por <a href="https://aurago.site" target="_blank">AuraGo</a>
+                Desenvolvido por <a href="https://aurago.site" target="_blank" rel="noopener">AuraGo</a>
             </div>
         </div>
     </footer>
