@@ -29,7 +29,7 @@
     <link rel="canonical" href="https://bloomts.com.br/">
     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/EduardoEMonteiro/site-bloom/refs/heads/main/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -51,13 +51,14 @@
     <!-- Google Fonts otimizado -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org Structured Data - HairSalon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HairSalon",
       "name": "Bloom Hair por Tamires Sousa",
       "image": "https://bloomts.com.br/Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp",
+      "logo": "https://bloomts.com.br/Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp",
       "description": "Salão de beleza especializado em cortes, colorações e tratamentos capilares em São João Del Rei",
       "address": {
         "@type": "PostalAddress",
@@ -86,6 +87,22 @@
         "https://instagram.com/bloomhairts",
         "https://facebook.com/SEU_FACEBOOK"
       ]
+    }
+    </script>
+
+    <!-- Schema adicional para Logo (Organization) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bloom Hair por Tamires Sousa",
+        "url": "https://bloomts.com.br",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://bloomts.com.br/Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp",
+            "width": 600,
+            "height": 600
+        }
     }
     </script>
 
@@ -490,6 +507,9 @@
     </style>
 </head>
 <body>
+
+    <!-- Logo oculta para SEO -->
+    <img src="Logo_para_Perfil_Instagram_e_whatsapp-removebg-preview.webp" alt="Bloom Hair por Tamires Sousa" class="hidden" width="600" height="600" itemprop="logo" style="display:none;">
 
     <header role="banner">
         <nav class="social-bar" aria-label="Redes sociais">
