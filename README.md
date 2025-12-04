@@ -12,8 +12,6 @@
 [![Mobile](https://img.shields.io/badge/📱_Mobile_First-✓-brightgreen)]()
 [![SEO](https://img.shields.io/badge/🔍_SEO_Optimized-✓-yellow)]()
 
-## 📸 **Visual do Site**
-*(Imagine aqui um GIF ou screenshot do site funcionando)*
 
 ## 🏆 **O Que Faz Este Projeto Se Destacar**
 
